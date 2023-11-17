@@ -1,0 +1,94 @@
+/* Styles created by Nataly Mota for the sign up form */
+
+main#login-or-sign-up {
+    width: 32rem;
+    margin: 15% auto;
+    padding: 2rem 1.4rem;
+    background-color: rgb(37, 50, 50);
+    font-family: Helvetica, Tahoma, Verdana, Arial, Geneva, sans-serif;
+}
+div#login-sign-up {
+    margin: 0 auto;
+    padding: 0;
+    width: fit-content;
+}
+main#login-or-sign-up form {
+    text-transform: capitalize;
+}
+main#login-or-sign-up h1 {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 2.1rem;
+    margin-bottom: 2rem;
+    /* color: rgb(242, 243, 243) */
+}
+main#login-or-sign-up input[type=button] {
+    width: 49.2%;
+    border: 5px solid;
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+    font-size: .9rem;
+}
+main#login-or-sign-up #sign_up {    
+    margin-right: 0;
+    margin-left: 0;
+    border-color: rgb(54, 169, 132);
+    padding-right: 15px;
+    background-color: rgb(54, 169, 132);
+    color: #fff;
+}
+main#login-or-sign-up #sign_up:hover {
+    background-color: rgb(84, 193, 158);
+}
+main#login-or-sign-up #log_in {
+    background-color: rgb(69, 82, 89);
+    margin-left: -2px;
+    margin-right: 0;
+    border-color: rgb(69, 82, 89);
+    padding-left: 2px;
+    color: rgb(163, 176, 165);
+}
+main#login-or-sign-up #log_in:hover {
+    background-color: rgb(76, 86, 91);
+}
+main#login-or-sign-up .name {
+    width: 47%;
+}
+main#login-or-sign-up #first_name {
+    margin-right: 1.1rem;
+}
+main#login-or-sign-up input[type=text], input[type=email], input[type=password] {
+    margin-bottom: 1.7rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    background-color: rgb(37, 50, 50);
+    color: rgb(113, 122, 128);
+    border: 1px solid rgb(113, 122, 128);
+}
+main#login-or-sign-up input[type=email], input[type=password]  {
+    width: 100%;
+}
+main#login-or-sign-up #email:focus {
+    width: 100%;
+}
+main#login-or-sign-up input[type=submit] {
+    width: 100%;
+    padding-top: .4rem;
+    padding-bottom: .5rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    border: 5px solid rgb(56, 175, 137);
+    background-color: rgb(56, 175, 137);
+    text-transform: uppercase;
+    color: #fff;
+}
+main#login-or-sign-up input[type=submit]:hover {
+    background-color: rgb(84, 193, 158);
+}
+
+/* End of styles created by Nataly Mota for the sign up form */
