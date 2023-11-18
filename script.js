@@ -51,64 +51,75 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    /* Form processing for modal 1 */
-    var wantsToOrder = "";
-    var yesToOrderingProd1 = document.getElementById("y_to_order1");
-    var noToOrderingProd1 = document.getElementById("n_to_order1");
 
-    function doWhenYesRadioBtnIsClicked () {
-        alert("Yes");
-        wantsToOrder = true;
-    } 
 
-    function doWhenNoRadioBtnIsClicked() {
-        alert("No");
-        wantsToOrder = false;
-    }
-
-    yesToOrderingProd1.addEventListener('click', doWhenYesRadioBtnIsClicked);
-    noToOrderingProd1.addEventListener('click', doWhenNoRadioBtnIsClicked);
-
+    /* 
+        Form processing for modals 1 through 3
+        This section of the code was completed by Nataly Mota with the help of a tutorial from JavaScriptTutorial.net, as well as from several interactive and video-based tutorials from a module in Khan Academy's Intro to Programming course, which covers DOM Manipulation with JavaScript. 
+    */
     var submit1 = document.getElementById('submit-anchor');
-    alert(submit1);
-    function onSubmitBtn () {
-        //e.preventDefault();
-        
-        alert('Button clicked!');
-        
-        /*
-        for (var i = 0; i < radioInput.length; i++) {
-            var isChecked = radioInput[i].;
-            console.log(isChecked);
-        }
-        */
-    }
-    submit1.addEventListener('click', onSubmitBtn);
-
-
-
-    /* Form processing for modal 2 */
-    wantsToOrder = "";
-    var yesToOrderingProd2 = document.getElementById("y_to_order2");
-    var noToOrderingProd2 = document.getElementById("n_to_order2");
-
-    yesToOrderingProd2.addEventListener('click', doWhenYesRadioBtnIsClicked);
-    noToOrderingProd2.addEventListener('click', doWhenNoRadioBtnIsClicked);
-
     var submit2 = document.getElementById('submit-anchor2');
-    submit2.addEventListener('click', onSubmitBtn);
+    var submit3 = document.getElementById('submit-anchor3');    
 
+    function onSubmitBtn1 (e) {
+        e.preventDefault();
+        
+        var radioButtons = document.querySelectorAll("input[name='order_product1']");     
+        let selectedValue;
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                selectedValue = radioButton.value;
+                break;
+            }
+        }
+        if (selectedValue === 'yes' || selectedValue === 'no') {
+            alert('Button clicked and selected value is ' + selectedValue);
+        } else {
+            alert('Button clicked, but no value was selected.')
+        }
+            
+    }
 
+    function onSubmitBtn2 (e) {
+        e.preventDefault();
+        
+        var radioButtons = document.querySelectorAll("input[name='order_product2']");     
+        let selectedValue;
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                selectedValue = radioButton.value;
+                break;
+            }
+        }
+        if (selectedValue === 'yes' || selectedValue === 'no') {
+            alert('Button clicked and selected value is ' + selectedValue);
+        } else {
+            alert('Button clicked, but no value was selected.')
+        }
+            
+    }
 
-    /* Form processing for modal 3 */
-    wantsToOrder = "";
-    var yesToOrderingProd2 = document.getElementById("y_to_order3");
-    var noToOrderingProd2 = document.getElementById("n_to_order3");
-
-    yesToOrderingProd2.addEventListener('click', doWhenYesRadioBtnIsClicked);
-    noToOrderingProd2.addEventListener('click', doWhenNoRadioBtnIsClicked);
-
-    var submit3 = document.getElementById('submit-anchor3');
-    submit3.addEventListener('click', onSubmitBtn);
+    function onSubmitBtn3 (e) {
+        e.preventDefault();
+        
+        var radioButtons = document.querySelectorAll("input[name='order_product2']");     
+        let selectedValue;
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                selectedValue = radioButton.value;
+                break;
+            }
+        }
+        if (selectedValue === 'yes' || selectedValue === 'no') {
+            alert('Button clicked and selected value is ' + selectedValue);
+        } else {
+            alert('Button clicked, but no value was selected.')
+        }
+            
+    }
+    
+    submit1.addEventListener('click', onSubmitBtn1);
+    submit2.addEventListener('click', onSubmitBtn2);
+    submit3.addEventListener('click', onSubmitBtn3);
 });
 
